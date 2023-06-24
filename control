@@ -1,0 +1,11 @@
+Package: dr.erast.notifake
+Name: Notifake
+Version: 1.0.0
+Architecture: iphoneos-arm
+Description: Simple & Powerful tool for creating notifications.
+Maintainer: Erast <applewormdev@gmail.com>
+Author: Erast <applewormdev@gmail.com>
+dev: Erast
+Section: Tweaks
+Homepage: https://github.com/MatoiDev
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>=7.0), com.opa334.altlist, libactivator (>= 1.8.3)

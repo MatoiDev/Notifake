@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>AWSourceLinkCell</string>
+			<key>source</key>
+			<string>GitHub</string>
+			<key>footerText</key>
+			<string>See more on my GitHub</string>
+			<key>footerTextColor</key>
+			<string>#c3c3c5</string>
+			<key>username</key>
+			<string>MatoiDev</string>
+			<key>tintColor</key>
+			<string>#FFBB69</string>
+			<key>height</key>
+			<real>60</real>
+			<key>action</key>
+			<string>goGH</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>AWSourceLinkCell</string>
+			<key>source</key>
+			<string>Telegram</string>
+			<key>username</key>
+			<string>Uncle_Milty</string>
+			<key>tintColor</key>
+			<string>#FFBB69</string>
+			<key>footerText</key>
+			<string>To contact me</string>
+			<key>footerTextColor</key>
+			<string>#c3c3c5</string>
+			<key>height</key>
+			<real>60</real>
+			<key>action</key>
+			<string>goTG</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>PostNotification</key>
+			<string>dr.erast.notifake/prefschanged</string>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>cellClass</key>
+			<string>PSSubtitleSwitchTableCell</string>
+			<key>cellSubtitleText</key>
+			<string>Enable / Disable the fake notification.</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>dr.erast.notifakepreferences</string>
+			<key>key</key>
+			<string>enableDelayedNotification</string>
+			<key>label</key>
+			<string>Tweak</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>ATLApplicationListSelectionController</string>
+			<key>cellClass</key>
+			<string>ATLApplicationSelectionCell</string>
+			<key>defaults</key>
+			<string>dr.erast.notifakepreferences</string>
+			<key>key</key>
+			<string>selectedAppID</string>
+			<key>label</key>
+			<string>App</string>
+			<key>sections</key>
+			<array>
+				<dict>
+					<key>sectionType</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>useSearchBar</key>
+			<true/>
+			<key>hideSearchBarWhileScrolling</key>
+			<true/>
+			<key>includeIdentifiersInSearch</key>
+			<true/>
+			<key>showIdentifiersAsSubtitle</key>
+			<true/>
+			<key>alphabeticIndexingEnabled</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>cell</key>             <string>PSEditTextCell</string>
+			<key>defaults</key>         <string>dr.erast.notifakepreferences</string>
+			<key>key</key>              <string>NTFNotificationTitle</string>
+			<key>label</key>            <string>Title</string>
+			<key>default</key>			<string></string>
+			<key>PostNotification</key> <string>dr.erast.notifake/prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>             <string>PSEditTextCell</string>
+			<key>defaults</key>         <string>dr.erast.notifakepreferences</string>
+			<key>key</key>              <string>NTFNotificationContent</string>
+			<key>label</key>            <string>Content</string>
+			<key>default</key>			<string></string>
+			<key>PostNotification</key> <string>dr.erast.notifake/prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>             <string>PSEditTextCell</string>
+			<key>defaults</key>         <string>dr.erast.notifakepreferences</string>
+			<key>key</key>              <string>NTFNotificationDelay</string>
+			<key>label</key>            <string>Delay</string>
+			<key>default</key>			<string>0.0</string>
+			<key>PostNotification</key> <string>dr.erast.notifake/prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>label</key>
+			<string>Activation Methods</string>
+			<key>isController</key>
+			<true/>
+			<key>bundle</key>
+			<string>LibActivator</string>
+			<key>activatorListener</key>
+			<string>dr.erast.notifake.listener</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>cellClass</key>
+			<string>HBTintedTableCell</string>
+			<key>tintColor</key>
+			<string>#FCDD76</string>
+			<key>label</key>
+			<string>Publish</string>
+			<key>action</key>
+			<string>postNotifakeation</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>NotifakePreferences</string>
+</dict>
+</plist>
