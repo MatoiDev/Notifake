@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
-#import "notifakepreferences/imports.h"
-#import "notifakepreferences/JBBulletinManager.h"
+#import "NotifakePreferences/imports.h"
+#import "NotifakePreferences/JBBulletinManager.h"
+
 #include <RemoteLog.h>
 
 
