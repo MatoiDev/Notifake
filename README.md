@@ -1,8 +1,11 @@
-<img src="Assets/banner.png" width="97.5%" height="auto">
+<img src="Assets/banner.png" width="97%" height="auto">
 
-<img src="Assets/img1.png" width="32%" height="auto">
-<img src="Assets/img2.png" width="32%" height="auto">
-<img src="Assets/img3.png" width="32%" height="auto">
+<div>
+  <img src="Assets/img1.png" width="32%" height="auto">
+  <img src="Assets/img2.png" width="32%" height="auto">
+  <img src="Assets/img3.png" width="32%" height="auto">
+</div>
+
 
 
 ### Dependencies
