@@ -49,11 +49,11 @@ static void __notifake_remote_log(NSString *text) {
     [[self navigationTitleLabel] setFont:[UIFont boldSystemFontOfSize:25]];
     [[self navigationTitleLabel] setText:@"Notifake"];
 
-    #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 // Для iOS 13 и новее
+    #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
         if (@available(iOS 13.0, *)) {
             [[self navigationTitleLabel] setTextColor:[UIColor labelColor]];
         }
-    #else // Для iOS 12 и старше
+    #else
         [[self navigationTitleLabel] setTextColor:[UIColor blackColor]];
     #endif
 
@@ -167,13 +167,11 @@ static void __notifake_remote_log(NSString *text) {
 
     double delay = [[prefs objectForKey: @"NTFNotificationDelay"] doubleValue];
 
-    // Создание фоновой задачи (Нужно для тогда, чтобы паблишер передал сообщение даже если настройки свёрнуты или телефон выключен)
     __block UIBackgroundTaskIdentifier backgroundTaskID = [application beginBackgroundTaskWithName:@"BackgroundTask" expirationHandler:^{
         [application endBackgroundTask:backgroundTaskID];
         backgroundTaskID = UIBackgroundTaskInvalid;
     }];
 
-    // Выполнение задержки в фоновом режиме
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         [NSThread sleepForTimeInterval:delay];
@@ -210,7 +208,6 @@ static void __notifake_remote_log(NSString *text) {
 -(void)timerCompletion {
     CFStringRef notificationName = CFSTR("dr.erast.showNotifake/buttonpressed");
     CFNotificationCenterRef notificationCenter = CFNotificationCenterGetDarwinNotifyCenter();
-    // Отправить сообщение в Notifake.x для отправки уведомления
     CFNotificationCenterPostNotification(notificationCenter, notificationName, NULL, NULL, true);
 }
 

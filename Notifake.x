@@ -59,13 +59,11 @@ static void showNotif() {
 
     double delay = [[prefs objectForKey: @"NTFNotificationDelay"] doubleValue];
 
-    // Создание фоновой задачи (Нужно для тогда, чтобы паблишер передал сообщение даже если настройки свёрнуты или телефон выключен)
     __block UIBackgroundTaskIdentifier backgroundTaskID = [application beginBackgroundTaskWithName:@"BackgroundTask" expirationHandler:^{
         [application endBackgroundTask:backgroundTaskID];
         backgroundTaskID = UIBackgroundTaskInvalid;
     }];
 
-    // Выполнение задержки в фоновом режиме
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         [NSThread sleepForTimeInterval:delay];

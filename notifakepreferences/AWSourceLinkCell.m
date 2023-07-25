@@ -31,11 +31,11 @@
 
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier specifier:specifier];
     UIColor * tintColor = [UIColor blackColor];
-    #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 // Для iOS 13 и новее
+    #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
         if (@available(iOS 13.0, *)) {
-                   tintColor = [UIColor labelColor];
+            tintColor = [UIColor labelColor];
         }
-    #else // Для iOS 12 и старше
+    #else
         tintColor = [UIColor blackColor];
     #endif
 
@@ -100,11 +100,11 @@
 
     self.sourceArea = [UIImageView new];
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 // Для iOS 13 и новее
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
     if (@available(iOS 13.0, *)) {
        [[self sourceArea] setTintColor:[UIColor labelColor]];
     }
-#else // Для iOS 12 и старше
+#else
     [[self sourceArea] setTintColor:[UIColor blackColor]];
 #endif
 
@@ -190,11 +190,11 @@
         } else if ([self rightImageColor]){
             [[self sourceArea] setTintColor: RIColor];
         } else {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000 // Для iOS 13 и новее
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
             if (@available(iOS 13.0, *)) {
                    [[self sourceArea] setTintColor: [UIColor labelColor]];
     }
-#else // Для iOS 12 и старше
+#else
             [[self sourceArea] setTintColor: [UIColor blackColor]];
 #endif
 
